@@ -1,11 +1,14 @@
 package models;
 
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
 public class AuthCreds {
     private String username;
     private String password;
+
+    public AuthCreds(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
 }
